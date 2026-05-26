@@ -1,10 +1,25 @@
-def reverseSentence(text):
+# <<<<<<< MITASK-M >>>>>>>
+def getSquareNumbers(arr):
     result = []
 
-    for word in text.split():
-        result.append(word[::-1])
+    for num in arr:
+        result.append({
+            "number": num,
+            "square": num * num
+        })
 
-    return " ".join(result)
+    return result
 
 
-print(reverseSentence("we like coding!"))
+print(getSquareNumbers([1, 2, 3]))
+# <<<<<<< MITASK-L >>>>>>>
+# def reverseSentence(text):
+#     result = []
+
+#     for word in text.split():
+#         result.append(word[::-1])
+
+#     return " ".join(result)
+
+
+# print(reverseSentence("we like coding!"))
