@@ -1,17 +1,25 @@
+# <<<<<<< MITASK-N >>>>>>>
+def palindromeCheck(text):
+    return text == text[::-1]
+
+
+print(palindromeCheck("dad"))
+
+
 # <<<<<<< MITASK-M >>>>>>>
-def getSquareNumbers(arr):
-    result = []
+# def getSquareNumbers(arr):
+#     result = []
 
-    for num in arr:
-        result.append({
-            "number": num,
-            "square": num * num
-        })
+#     for num in arr:
+#         result.append({
+#             "number": num,
+#             "square": num * num
+#         })
 
-    return result
+#     return result
 
 
-print(getSquareNumbers([1, 2, 3]))
+# print(getSquareNumbers([1, 2, 3]))
 # <<<<<<< MITASK-L >>>>>>>
 # def reverseSentence(text):
 #     result = []
