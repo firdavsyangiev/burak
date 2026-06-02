@@ -7,3 +7,10 @@
      css => Snake case
  - Error Handling     
 */
+
+/*
+  Traditional Api 
+  Rest Api
+  GraphQL Api
+  ...
+*/
