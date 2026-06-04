@@ -1,15 +1,23 @@
+# <<<<<<< MITASK-P >>>>>>>
+def objectToArray(obj):
+    return list(obj.items())
+
+
+print(objectToArray({"a": 10, "b": 20}))
+
+
 # <<<<<<< MITASK-O >>>>>>>
-def calculateSumOfNumbers(arr):
-    total = 0
+# def calculateSumOfNumbers(arr):
+#     total = 0
 
-    for item in arr:
-        if type(item) in [int, float]:
-            total += item
+#     for item in arr:
+#         if type(item) in [int, float]:
+#             total += item
 
-    return total
+#     return total
 
 
-print(calculateSumOfNumbers([10, "10", {"son": 10}, True, 35]))
+# print(calculateSumOfNumbers([10, "10", {"son": 10}, True, 35]))
 
 # <<<<<<< MITASK-N >>>>>>>
 # def palindromeCheck(text):
