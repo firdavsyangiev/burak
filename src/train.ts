@@ -14,3 +14,8 @@
   GraphQL Api
   ...
 */
+
+/*
+  Traditional Frontend Development  ==> BSSR (Adminka)            => EJS
+  Modern Frontend Development       ==> SPA  (User's Application) => REACT
+*/
