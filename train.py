@@ -1,9 +1,29 @@
+# <<<<<<< MITASK-R >>>>>>>
+def calculate(calc):
+    a, sign, b = calc.split()
+
+    a = int(a)
+    b = int(b)
+
+    if sign == "+":
+        return a + b
+    elif sign == "-":
+        return a - b
+    elif sign == "*":
+        return a * b
+    elif sign == "/":
+        return a / b
+
+
+print(calculate("1 + 3"))
+
+
 # <<<<<<< MITASK-Q >>>>>>>
-def hasProperty(obj, prop):
-    return prop in obj
+# def hasProperty(obj, prop):
+#     return prop in obj
 
 
-print(hasProperty({"name": "BMW"}, "name"))
+# print(hasProperty({"name": "BMW"}, "name"))
 
 
 # <<<<<<< MITASK-P >>>>>>>
