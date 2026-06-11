@@ -8,19 +8,25 @@
  - Error Handling     
 */
 
-/*
+/* Request:
   Traditional Api 
   Rest Api
   GraphQL Api
   ...
 */
 
-/*
+/* Frontend Development:
   Traditional Frontend Development  ==> BSSR (Adminka)            => EJS
   Modern Frontend Development       ==> SPA  (User's Application) => REACT
 */
 
-/*
+/* Cookies:
   request join 
   self destroy
+*/
+
+/* Validation:
+  Frontend Validation
+  Backend Validation
+  Database Validation
 */
