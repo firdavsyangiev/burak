@@ -1,21 +1,30 @@
+# <<<<<<< MITASK-S >>>>>>>
+def missingNumber(numb):
+    n = len(numb)
+    return n * (n + 1) // 2 - sum(numb)
+
+
+print(missingNumber([3, 0, 1]))
+
+
 # <<<<<<< MITASK-R >>>>>>>
-def calculate(calc):
-    a, sign, b = calc.split()
+# def calculate(calc):
+#     a, sign, b = calc.split()
 
-    a = int(a)
-    b = int(b)
+#     a = int(a)
+#     b = int(b)
 
-    if sign == "+":
-        return a + b
-    elif sign == "-":
-        return a - b
-    elif sign == "*":
-        return a * b
-    elif sign == "/":
-        return a / b
+#     if sign == "+":
+#         return a + b
+#     elif sign == "-":
+#         return a - b
+#     elif sign == "*":
+#         return a * b
+#     elif sign == "/":
+#         return a / b
 
 
-print(calculate("1 + 3"))
+# print(calculate("1 + 3"))
 
 
 # <<<<<<< MITASK-Q >>>>>>>
