@@ -1,10 +1,17 @@
+# <<<<<<< MITASK-T >>>>>>>
+def mergeSortedArrays(arr1, arr2):
+    return sorted(arr1 + arr2)
+
+
+print(mergeSortedArrays([0, 3, 4], [4, 6]))
+
 # <<<<<<< MITASK-S >>>>>>>
-def missingNumber(numb):
-    n = len(numb)
-    return n * (n + 1) // 2 - sum(numb)
+# def missingNumber(numb):
+#     n = len(numb)
+#     return n * (n + 1) // 2 - sum(numb)
 
 
-print(missingNumber([3, 0, 1]))
+# print(missingNumber([3, 0, 1]))
 
 
 # <<<<<<< MITASK-R >>>>>>>
