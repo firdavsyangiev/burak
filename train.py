@@ -1,9 +1,21 @@
+# <<<<<<< MITASK-V >>>>>>>
+def countChars(text):
+    result = {}
+
+    for char in text:
+        result[char] = text.count(char)
+
+    return result
+
+
+print(countChars("hello"))
+
 # <<<<<<< MITASK-T >>>>>>>
-def mergeSortedArrays(arr1, arr2):
-    return sorted(arr1 + arr2)
+# def mergeSortedArrays(arr1, arr2):
+#     return sorted(arr1 + arr2)
 
 
-print(mergeSortedArrays([0, 3, 4], [4, 6]))
+# print(mergeSortedArrays([0, 3, 4], [4, 6]))
 
 # <<<<<<< MITASK-S >>>>>>>
 # def missingNumber(numb):
