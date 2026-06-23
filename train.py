@@ -1,14 +1,26 @@
-# <<<<<<< MITASK-V >>>>>>>
-def countChars(text):
-    result = {}
+# <<<<<<< MITASK-W >>>>>>>
+def chunkArray(arr, size):
+    result = []
 
-    for char in text:
-        result[char] = text.count(char)
+    for i in range(0, len(arr), size):
+        result.append(arr[i:i + size])
 
     return result
 
 
-print(countChars("hello"))
+print(chunkArray([1, 2, 3, 4, 5], 2))
+
+# <<<<<<< MITASK-V >>>>>>>
+# def countChars(text):
+#     result = {}
+
+#     for char in text:
+#         result[char] = text.count(char)
+
+#     return result
+
+
+# print(countChars("hello"))
 
 # <<<<<<< MITASK-T >>>>>>>
 # def mergeSortedArrays(arr1, arr2):
