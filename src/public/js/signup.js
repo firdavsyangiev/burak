@@ -46,8 +46,13 @@ function validateSignupForm() {
     return false;
   }
 
+<<<<<<< HEAD
   const memberImage = $(".member-image").get(0).files[0].name
     ? $(".member-image").get(0).files[0].name
+=======
+  const memberImage = $(".meber-image").get(0).file[0].files[0].name
+    ? $(".member-image").get(0)?.files[0]?.name
+>>>>>>> 460cfeb (fix: modify products page based on products data)
     : null;
   if (!memberImage) {
     alert("Please insert restaurant image!");
