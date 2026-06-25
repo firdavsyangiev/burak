@@ -8,13 +8,13 @@ import {
 
 const productSchema = new Schema(
   {
-    ProductStatus: {
+    productStatus: {
       type: String,
       enum: ProductStatus,
       default: ProductStatus.PAUSE,
     },
 
-    ProductCollection: {
+    productCollection: {
       type: String,
       enum: ProductCollection,
       reuired: true,
