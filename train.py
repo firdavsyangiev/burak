@@ -1,18 +1,31 @@
+# <<<<<<< MITASK-Y >>>>>>>
+def findIntersection(arr1, arr2):
+    result = []
+
+    for item in arr1:
+        if item in arr2:
+            result.append(item)
+
+    return result
+
+
+print(findIntersection([1, 2, 3], [3, 2, 0]))
+
 # <<<<<<< MITASK-X >>>>>>>
-def countOccurrences(obj, key):
-    count = 0
+# def countOccurrences(obj, key):
+#     count = 0
 
-    for k, v in obj.items():
-        if k == key:
-            count += 1
+#     for k, v in obj.items():
+#         if k == key:
+#             count += 1
 
-        if isinstance(v, dict):
-            count += countOccurrences(v, key)
+#         if isinstance(v, dict):
+#             count += countOccurrences(v, key)
 
-    return count
+#     return count
 
 
-print(countOccurrences({"model": "A", "s": {"model": "B"}}, "model"))
+# print(countOccurrences({"model": "A", "s": {"model": "B"}}, "model"))
 
 # <<<<<<< MITASK-W >>>>>>>
 # def chunkArray(arr, size):
