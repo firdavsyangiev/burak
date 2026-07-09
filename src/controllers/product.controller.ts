@@ -42,7 +42,7 @@ productController.getProduct = async (req: ExtendedRequest, res: Response) => {
     const memberId = req.member?._id ?? null,
       result = await productService.getProduct(memberId, id as string);
 
-    // res.status(HttpCode.OK).json(result);
+    res.status(HttpCode.OK).json(result);
   } catch (err) {
     console.log("Error, getProduct:", err);
     if (err instanceof Errors) res.status(err.code).json(err);
@@ -76,6 +76,7 @@ productController.createNewProduct = async (
       throw new Errors(HttpCode.INTERNAL_SEVER_ERROR, Message.CREATED_FAILED);
 
     const data: ProductInput = req.body;
+
     data.productImages = req.files?.map((ele) => {
       return ele.path.replace(/\\/g, "/");
     });

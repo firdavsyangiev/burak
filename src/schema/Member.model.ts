@@ -47,7 +47,7 @@ const memberSchema = new Schema(
 
     memberPoints: {
       type: Number,
-      dafault: 0,
+      default: 0,
     },
   },
   { timestamps: true }, // createdAt, updatedAt

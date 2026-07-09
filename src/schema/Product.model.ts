@@ -17,7 +17,7 @@ const productSchema = new Schema(
     productCollection: {
       type: String,
       enum: ProductCollection,
-      reuired: true,
+      required: true,
     },
 
     productName: {
