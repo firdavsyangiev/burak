@@ -1,0 +1,63 @@
+import { Member } from "../libs/types/member";
+import { Order, OrderItemInput } from "../libs/types/order";
+import OrderModel from "../schema/Order.model";
+import OrderItemModel from "../schema/OrderItem.model";
+import { shapeInMongooseObjectId } from "../libs/config";
+import Errors, { HttpCode, Message } from "../libs/Errors";
+import { ObjectId } from "mongoose";
+
+class OrderService {
+  private readonly orderModel;
+  private readonly OrderItemModel;
+
+  constructor() {
+    this.orderModel = OrderModel;
+    this.OrderItemModel = OrderItemModel;
+  }
+
+  public async createOrder(
+    member: Member,
+    input: OrderItemInput[],
+  ): Promise<Order> {
+    const memberId = shapeInMongooseObjectId(member._id);
+    const amount = input.reduce((accumulator: number, item: OrderItemInput) => {
+      return accumulator + item.itemPrice * item.itemQuantity;
+    }, 0);
+    const delivery = amount < 100 ? 5 : 0;
+
+    try {
+      const newOrder = await this.orderModel.create({
+        orderTotal: amount + delivery,
+        orderDelivery: delivery,
+        memberId: memberId,
+      });
+
+      const orderId = newOrder._id;
+      console.log("orderId:", newOrder._id);
+      await this.recordOrderItem(orderId, input);
+
+      return newOrder;
+    } catch (err) {
+      console.log("Error, model:createOrder:", err);
+      throw new Errors(HttpCode.BAD_REQUEST, Message.CREATED_FAILED);
+    }
+  }
+
+  private async recordOrderItem(
+    orderId: ObjectId,
+    input: OrderItemInput[],
+  ): Promise<void> {
+    const promisedList = input.map(async (item: OrderItemInput) => {
+      item.orderId = orderId;
+      item.productId = shapeInMongooseObjectId(item.productId);
+      await this.OrderItemModel.create(item);
+      return "INSERTED";
+    });
+
+    console.log("promisedList:", promisedList);
+    const orderItemsState = await Promise.all(promisedList);
+    console.log("orderItemsState:", orderItemsState);
+  }
+}
+
+export default OrderService;
